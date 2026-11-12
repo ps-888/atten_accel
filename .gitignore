@@ -1,0 +1,10 @@
+build/
+__pycache__/
+*.pt
+*.npy
+formal/tiled_*/
+formal/*.log
+formal/tiled_flat.v
+formal/softmax_hp_lut.svh
+formal/formal_results.run.txt
+compress/results/log_*.txt
