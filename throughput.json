@@ -1,0 +1,13 @@
+{
+ "fmax_mhz": 348.7,
+ "array_utilization_64_tokens": 0.744,
+ "causal_head_64_tokens": {
+  "tiles": 36,
+  "cycles": 932,
+  "ops": 73728,
+  "ops_per_cycle": 79.1,
+  "effective_gops": 27.6,
+  "latency_us": 2.67
+ },
+ "peak_gops": 44.6
+}

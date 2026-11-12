@@ -1,0 +1,28 @@
+[tasks]
+bmc
+prove
+prove8
+
+[options]
+bmc: mode bmc
+bmc: depth 160
+prove: mode prove
+prove8: mode prove
+multiclock off
+
+[engines]
+bmc: abc bmc3
+prove: abc pdr
+prove8: abc pdr
+
+[script]
+read_verilog -sv -formal -DFORMAL -I. tiled_flat.v
+bmc: chparam -set N 4 -set MAXT 2 -set DATA_W 2 -set ACC_W 8 attn_tiled
+prove: chparam -set N 4 -set MAXT 2 -set DATA_W 2 -set ACC_W 8 attn_tiled
+prove8: chparam -set N 8 -set MAXT 4 -set DATA_W 2 -set ACC_W 8 attn_tiled
+prep -top attn_tiled
+async2sync
+
+[files]
+tiled_flat.v
+softmax_hp_lut.svh
