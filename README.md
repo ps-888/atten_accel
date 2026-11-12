@@ -34,7 +34,7 @@ The design uses one 8×8 grid of multiply-accumulate units for both steps of att
 
 | | |
 |---|---|
-| Clock speed | 349 MHz (Nangate45, before layout) |
+| Clock speed | 349 MHz (Nangate45, post synthesis) |
 | Area | 287,770 µm² |
 | Array utilization | 74% on 64-token sequences |
 | Throughput | 27.6 GOPS effective |
