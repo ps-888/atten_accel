@@ -119,13 +119,6 @@ The student is 2 layers (half depth), with the same d_head 8, so it runs on the 
 
 **Effects are not additive, and the worst component dominates.** The naive stack inherited 2:4's damage. The informed stack uses only what sections 1–6 measured as cheap: 74% of the attention cycles and 4-bit weights for +0.017 nats/char. All informed stacks were re-run on the bit-exact hardware model and agree with FP32 to within 0.4 milli-nats.
 
-## Takeaways
-
-1. **Always compare against a dense model fine-tuned the same way.** Lesson 0 would otherwise have corrupted every result.
-2. **Recovery matters more than the pruning criterion,** but the criterion still matters a lot (importance vs random heads: 2–3×).
-3. **Match the compression to what the hardware can skip.** Weight sparsity does nothing for this accelerator; head pruning and tile windows convert directly into cycles.
-4. **Match the compression to the workload's structure.** Local attention was about 5× cheaper than head pruning per cycle saved.
-5. **Small models are hard to compress.** Expect these numbers to be pessimistic compared with LLM-scale results.
 
 ## Run it
 
