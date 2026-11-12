@@ -40,7 +40,7 @@ The design uses one 8×8 grid of multiply-accumulate units for both steps of att
 | Throughput | 27.6 GOPS effective |
 | Cycles for one 64-token attention head | 932 |
 
-Synthesis was done with Yosys and timing was checked with OpenSTA. Place and route was not done.
+Synthesis was done with Yosys and timing was checked with OpenSTA.
 
 ## Testing
 
